@@ -1,0 +1,124 @@
+:root{
+--Orange: hsl(25, 97%, 53%);
+--White: hsl(0, 0%, 100%);
+--LightGrey: hsl(217, 12%, 63%);
+--DarkBlue: hsl(213, 19%, 18%);
+--VeryDarkBlue: hsl(216, 12%, 8%);
+--vdbTrains: hsla(216, 12%, 8%, 0.2);
+
+font-family: 'Overpass';
+font-weight: 400;
+font-size: 15px;
+background-color: black;
+color: var(--LightGrey);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+}
+
+.rating-card, .thanks-card{
+    background-color: var(--VeryDarkBlue);
+    max-width: 340px;
+    min-height: 340px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+h1{
+    color: var(--White);
+}
+
+/* rating-card */
+
+.star-circle{
+    border-radius: 50%;
+    background-color: var(--DarkBlue);
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-image: url('images/icon-star.svg');
+    background-repeat: no-repeat;
+    background-position:50% 50%;
+    background-size: 14px 14px;
+    padding: 5px;
+}
+
+.star-circle > img {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+.rating-numbers{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.rating {
+    border-radius: 50%;
+    background-color: var(--DarkBlue);
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-numbers > span:hover {
+    background-color: var(--Orange);
+    color: black;
+}
+
+.selected{
+    border-radius: 50%;
+    background-color: var(--Orange);
+    color: black;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    background-color: var(--Orange);
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    min-height: 35px;
+    margin-top: 30px;
+    letter-spacing: 2px;
+}
+
+button:hover{
+    background-color: var(--White);
+}
+
+/* thank you card */
+
+.thanks-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
+}
+
+.your-rating{
+    background-color: var(--DarkBlue);
+    padding: 10px;
+    border-radius: 20px;
+    color: var(--Orange);
+    margin-top: 25px;
+}
+
+.thanks-card>h1{
+    margin-bottom: 0;
+}
+
